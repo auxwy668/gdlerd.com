@@ -1,0 +1,250 @@
+<!DOCTYPE html><html lang="zh-CN"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Telegram群管理员如何添加与权限分配（逐项详解）</title><meta name="description" content="2026最新Telegram群管理员添加移除完整教程：从如何任命第一位管理员到逐项分配发言管理、成员审批、群信息修改等11项权限，每一步都有详细的操作说明与权限含义解释。附带权限配置最佳实践和管理员行为规范建议，帮你搭建安全高效的群管理团队。"><meta name="keywords" content="Telegram群管理员,Telegram添加管理员,Telegram管理员权限,群管理权限分配,移除管理员,群管理员设置,Telegram群权限"><link rel="canonical" href="https://gdlerd.com/telegram-add-group-admin/"><link rel="alternate" hreflang="zh-CN" href="https://gdlerd.com/telegram-add-group-admin/"><meta name="robots" content="index, follow"><!-- OG --><meta property="og:title" content="Telegram群管理员如何添加与权限分配（逐项详解）"><meta property="og:description" content="2026最新Telegram群管理员添加移除完整教程：从如何任命第一位管理员到逐项分配发言管理、成员审批、群信息修改等11项权限，每一步都有详细的操作说明与权限含义解释。附带权限配置最佳实践和管理员行为规范建议，帮你搭建安全高效的群管理团队。"><meta property="og:url" content="https://gdlerd.com/telegram-add-group-admin/"><meta property="og:type" content="article"><meta property="og:image" content="https://gdlerd.com/images/og-default.png"><meta name="twitter:card" content="summary_large_image"><!-- Favicon --><link rel="icon" type="image/svg+xml" href="/favicon.svg"><!-- Structured Data --><script type="application/ld+json">[{"@context":"https://schema.org","@type":"Article","headline":"Telegram群管理员如何添加与权限分配（逐项详解）","description":"2026最新Telegram群管理员添加移除完整教程：从如何任命第一位管理员到逐项分配发言管理、成员审批、群信息修改等11项权限，每一步都有详细的操作说明与权限含义解释。附带权限配置最佳实践和管理员行为规范建议，帮你搭建安全高效的群管理团队。","url":"https://gdlerd.com/telegram-add-group-admin/","datePublished":"2026-06-26","dateModified":"2026-06-26","author":{"@type":"Organization","name":"TG教程指南"},"inLanguage":"zh-CN","image":"https://gdlerd.com/images/og-default.png"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://gdlerd.com"},{"@type":"ListItem","position":2,"name":"Telegram群管理员如何添加与权限分配（逐项详解）"}]}]</script><style>.art-wrap[data-astro-cid-yvbahnfj]{max-width:1100px}</style></head> <body> <!-- Nav --> <nav class="site-nav"> <div class="nav-inner"> <a href="/" class="nav-logo">TG建群指南</a> <div class="nav-links"> <a href="/">首页</a> <a href="/articles/">所有教程</a> <a href="/articles/?category=group-create">群组创建</a><a href="/articles/?category=group-permissions">群权限设置</a><a href="/articles/?category=group-admin">管理员配置</a><a href="/articles/?category=group-features">群组功能管理</a><a href="/articles/?category=group-faq">建群常见问题</a> </div> </div> </nav> <!-- Breadcrumb (article pages) --> <div class="breadcrumb"> <a href="/">首页</a> <span> &raquo; Telegram群管理员如何添加与权限分配（逐项详解）</span> </div> <main>  <div class="art-wrap" data-astro-cid-yvbahnfj> <article class="art-main" data-astro-cid-yvbahnfj> <h1 data-astro-cid-yvbahnfj>Telegram群管理员如何添加与权限分配（逐项详解）</h1> <div class="art-meta" data-astro-cid-yvbahnfj> <span data-astro-cid-yvbahnfj>📅 2026-06-26</span> <span class="art-tag group-admin" data-astro-cid-yvbahnfj>管理员配置</span> </div> <div class="art-body" data-astro-cid-yvbahnfj> <img src="/images/telegram-add-group-admin-cover.jpg" alt="Telegram群管理员如何添加与权限分配（逐项详解）" style="width:100%; border-radius:8px; margin-bottom:24px;" data-astro-cid-yvbahnfj> <p>你一个人管着一个500人的Telegram群，每天有人发广告、有人吵架、有人乱改群名——你不在线的时候，群就乱成一锅粥。</p>
+<p>这就是为什么你要设置管理员。Telegram的管理员系统做得非常精细，精细到你可以在11个维度上对每个管理员做不同配置：张三只管删消息，李四只管审批入群申请，王五可以改群头像但不可以踢人。</p>
+<p>这篇文章会带你从头到尾走一遍：如何添加第一个管理员、如何理解每一项权限的含义、如何根据不同角色做权限分配组合、以及如何安全地移除不再需要的管理员。</p>
+<p>如果你还没创建群组，先看这篇：<a href="/telegram-create-group-tutorial/">Telegram从零创建私密/公开群组详细步骤</a>。建好群再回来配置管理员。</p>
+<h2 id="admin-system">Telegram群管理员体系概述</h2>
+<p>先搞清楚Telegram群组里的角色层级。一个群组有三层角色：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>角色</th><th>权限范围</th><th>人数限制</th></tr></thead><tbody><tr><td><strong>群主（Owner）</strong></td><td>全部权限，不可被移除，可转让</td><td>1人</td></tr><tr><td><strong>管理员（Admin）</strong></td><td>由群主分配的具体权限</td><td>最多50人</td></tr><tr><td><strong>普通成员（Member）</strong></td><td>默认发言权限（取决于群设置）</td><td>最多20万</td></tr></tbody></table>
+<p>关键区别：群主只有一个，是群的创建者或转让后的接手者。群主身份不可被其他管理员撤销——除非群主自己主动转让身份。管理员可以有多个，任何管理员都可以被群主移除。</p>
+<p>Telegram对管理员的权限控制采取了「逐项开关」的设计。你添加一个管理员后，Telegram会展示一个权限清单，每一项都可以独立打开或关闭。这种设计比「超级管理员/普通管理员」的二分法灵活得多——你可以根据每个管理员的职责范围，精确控制他能做什么、不能做什么。</p>
+<h2 id="add-admin">添加群管理员的具体操作步骤</h2>
+<p>添加管理员的前提：<strong>你必须是群主</strong>。如果你不是群主，按照Telegram的规则，你无法添加其他管理员，除非群主授予了你「添加新管理员」的权限。</p>
+<h3 id="手机端操作步骤">手机端操作步骤</h3>
+<ol>
+<li>进入你的群组聊天界面</li>
+<li>点击顶部群名称栏，进入群信息页面</li>
+<li>点击右上角的编辑按钮（一支笔的图标，iOS在右上角，Android在顶部）</li>
+<li>在群信息编辑页，选择 <strong>Administrators</strong>（管理员）</li>
+<li>点击 <strong>Add Admin</strong>（添加管理员）</li>
+<li>在成员列表中搜索并选择你想任命的人</li>
+<li>进入权限配置页面，逐项开关你需要授予的权限</li>
+<li>点击右上角的 ✓ 完成添加</li>
+</ol>
+<h3 id="电脑端操作步骤">电脑端操作步骤</h3>
+<ol>
+<li>进入群组，点击顶部的群名称</li>
+<li>在群信息面板中，点击右上角三个点（···）</li>
+<li>选择 <strong>Manage Group</strong>（管理群组）</li>
+<li>点击 <strong>Administrators</strong></li>
+<li>点击 <strong>Add Admin</strong></li>
+<li>搜索并选择成员</li>
+<li>勾选你需要授予的权限项</li>
+<li>点击 <strong>Save</strong>（保存）</li>
+</ol>
+<h3 id="操作注意事项">操作注意事项</h3>
+<ul>
+<li>被添加的人必须是群成员，你不能添加不在群里的人为管理员</li>
+<li>添加管理员后，对方会收到一条系统通知：「You are now an admin in “群名称”」</li>
+<li>如果对方之前被你设置了「禁止发言」，你仍然可以添加他为管理员——成为管理员后禁言会自动解除</li>
+</ul>
+<h2 id="permission-detail">管理员11项权限逐条详解</h2>
+<p>这是整篇文章最核心的部分。Telegram为管理员提供了11项可独立开关的权限。每一项都有其特定的作用范围和潜在风险，你需要理解每一项的真正含义，才能做出安全的配置。</p>
+<h3 id="1-change-group-info修改群信息">1. Change Group Info（修改群信息）</h3>
+<p><strong>作用：</strong> 允许管理员修改群名称、群头像和群简介。</p>
+<p><strong>建议配置：</strong> 通常建议开启。群名称和头像属于基础信息，不会造成严重后果。但如果你运营的是品牌群，不希望管理员随意更改品牌标识，可以关闭此项。</p>
+<p><strong>风险等级：</strong> ★☆☆☆☆</p>
+<h3 id="2-delete-messages删除消息">2. Delete Messages（删除消息）</h3>
+<p><strong>作用：</strong> 允许管理员删除群内任何人发布的单条消息。</p>
+<p><strong>建议配置：</strong> 强烈建议开启。这是管理员最基本的工作——清理广告信息、删除不当言论。没有这个权限，管理员相当于一个「名誉头衔」，什么实际事情都做不了。</p>
+<p><strong>风险等级：</strong> ★☆☆☆☆</p>
+<h3 id="3-ban-users封禁用户">3. Ban Users（封禁用户）</h3>
+<p><strong>作用：</strong> 允许管理员踢出成员并禁止其再次加入。被封禁的用户会从群里移除，并且无法通过任何邀请链接重新加入。</p>
+<p><strong>建议配置：</strong> 建议开启，但谨慎授予。这是管理员最「重」的权限之一。踢人不可逆——被踢出的用户连同他之前发的所有消息一起从群中消失。如果你有多个管理员，建议只给核心管理开这项权限。</p>
+<p><strong>风险等级：</strong> ★★★★☆</p>
+<h3 id="4-invite-users邀请用户">4. Invite Users（邀请用户）</h3>
+<p><strong>作用：</strong> 允许管理员通过链接或直接搜索添加新成员到群组。</p>
+<p><strong>建议配置：</strong> 在公开群或通过链接邀请的私密群中建议开启。但如果你的群是人满即止的封闭群，可以关闭此项，只由群主统一控制入群人数。</p>
+<p><strong>风险等级：</strong> ★★☆☆☆</p>
+<h3 id="5-pin-messages置顶消息">5. Pin Messages（置顶消息）</h3>
+<p><strong>作用：</strong> 允许管理员将任意消息置顶到群聊顶部。置顶消息会在群信息栏下显示，群内所有人都能看到。</p>
+<p><strong>建议配置：</strong> 建议开启。置顶消息是管理员发布公告和重要通知的主要方式。如果关闭此项，所有重要通知都只能通过「群公告」功能发布。</p>
+<p><strong>风险等级：</strong> ★☆☆☆☆</p>
+<h3 id="6-manage-live-streams管理直播">6. Manage Live Streams（管理直播）</h3>
+<p><strong>作用：</strong> 允许管理员开启和管理群组内的视频直播功能。</p>
+<p><strong>建议配置：</strong> 如果你的群不涉及直播功能，直接关闭即可。对于以直播互动为主的社群，可以给负责直播的管理员单独开启此项。</p>
+<p><strong>风险等级：</strong> ★☆☆☆☆</p>
+<h3 id="7-manage-voice-chats管理语音聊天">7. Manage Voice Chats（管理语音聊天）</h3>
+<p><strong>作用：</strong> 允许管理员发起和管理群组语音聊天室。</p>
+<p><strong>建议配置：</strong> 和直播权限类似，按实际需求开启。普通文字聊天群可以关闭，以直播/语音为核心的社群则需要开启。</p>
+<p><strong>风险等级：</strong> ★★☆☆☆</p>
+<h3 id="8-add-new-admins添加新管理员">8. Add New Admins（添加新管理员）</h3>
+<p><strong>作用：</strong> 允许管理员任命其他成员为管理员，并配置其权限（但不能授予超过自身已有的权限）。</p>
+<p><strong>建议配置：</strong> 这是权限层级中的「权限管理权」，是仅次于群主的高级权限。<strong>强烈建议谨慎授予</strong>。只有你最信任的管理员才应该获得这项权限。因为一旦某个管理员可以添加新管理员，他就可以组建自己的管理层级，等于在你不知情的情况下扩展管理团队。</p>
+<p><strong>风险等级：</strong> ★★★★★</p>
+<h3 id="9-remain-anonymous匿名发言">9. Remain Anonymous（匿名发言）</h3>
+<p><strong>作用：</strong> 管理员在群内发言时，消息发送者显示为群名称而非个人用户名。这是一个可选的开关——管理员可以自行选择是否以匿名身份发言。</p>
+<p><strong>建议配置：</strong> 按需授予。如果你的群需要管理员以「官方身份」发布公告，可以开启此项。但如果希望管理保持透明，关闭此项让管理员以真实身份发言更好。</p>
+<p><strong>风险等级：</strong> ★☆☆☆☆</p>
+<h3 id="10-manage-topics管理话题">10. Manage Topics（管理话题）</h3>
+<p><strong>作用：</strong> 当群组开启了话题（Topics）功能后，允许管理员创建、关闭和管理话题分组。</p>
+<p><strong>建议配置：</strong> 仅在开启了话题功能的大型群中需要。500人以下的小群通常不需要开启话题功能。</p>
+<p><strong>风险等级：</strong> ★★☆☆☆</p>
+<h3 id="11-manage-stories管理快拍故事">11. Manage Stories（管理快拍/故事）</h3>
+<p><strong>作用：</strong> 允许管理员在群组内发布和管理快拍（Stories）内容。</p>
+<p><strong>建议配置：</strong> Telegram Stories在群组中使用场景较少，大多数群不需要开启此项。如果你是内容型社群，需要管理员通过Stories推送内容，可以单独开启。</p>
+<p><strong>风险等级：</strong> ★☆☆☆☆</p>
+<h2 id="permission-combination">管理员权限分角色配置方案</h2>
+<p>理解每一项权限后，你需要根据自己的群规模和运营模式，给不同管理员分配不同的权限组合。以下是三种常见角色的配置建议：</p>
+<h3 id="内容审核员content-moderator">内容审核员（Content Moderator）</h3>
+<p>最适合大群中负责清理垃圾信息的管理员。</p>
+<ul>
+<li>✅ 删除消息</li>
+<li>✅ 封禁用户</li>
+<li>❌ 修改群信息</li>
+<li>❌ 添加新管理员</li>
+<li>❌ 置顶消息</li>
+</ul>
+<h3 id="社群运营community-manager">社群运营（Community Manager）</h3>
+<p>适合负责群氛围维护和日常运营的管理员。</p>
+<ul>
+<li>✅ 删除消息</li>
+<li>✅ 封禁用户</li>
+<li>✅ 修改群信息</li>
+<li>✅ 置顶消息</li>
+<li>✅ 邀请用户</li>
+<li>❌ 添加新管理员</li>
+</ul>
+<h3 id="超级管理super-admin">超级管理（Super Admin）</h3>
+<p>适合群主最信任的副手，可以分担大部分管理职责。</p>
+<ul>
+<li>✅ 全部权限（除了群主专有的转让权）</li>
+<li>✅ 添加新管理员（<strong>仅在完全信任时授予</strong>）</li>
+</ul>
+<h3 id="配置原则">配置原则</h3>
+<ol>
+<li><strong>最小权限原则</strong>：只授予完成任务所必需的最少权限，不给多余的</li>
+<li><strong>分批授予</strong>：新管理员先从基础权限开始，观察一段时间后再逐步增加</li>
+<li><strong>定期审查</strong>：至少每月检查一次管理员列表，清理不再活跃的管理员</li>
+<li><strong>记录变更</strong>：在大群中，管理员变动建议在群公告中告知全体成员</li>
+</ol>
+<h2 id="remove-admin">移除群管理员的方法</h2>
+<p>当管理员不再适合履行职责时，群主需要及时将其移除。移除操作同样简单，但有几个注意事项。</p>
+<h3 id="移除操作步骤">移除操作步骤</h3>
+<p><strong>手机端：</strong></p>
+<ol>
+<li>进入群信息页 → Administrators</li>
+<li>在管理员列表中找到目标管理员</li>
+<li>点击该管理员名字，进入其权限编辑页</li>
+<li>点击底部的 <strong>Dismiss Admin</strong>（撤销管理员）</li>
+<li>确认操作</li>
+</ol>
+<p><strong>电脑端：</strong></p>
+<ol>
+<li>群信息 → Manage Group → Administrators</li>
+<li>找到目标管理员</li>
+<li>点击三道横线的拖拽图标旁的名字</li>
+<li>点击 <strong>Dismiss Admin</strong></li>
+</ol>
+<h3 id="移除后的影响">移除后的影响</h3>
+<ul>
+<li>被移除的管理员<strong>不会收到通知</strong>——Telegram不会发送「你已被撤销管理员」的提示</li>
+<li>该用户<strong>不会被踢出群</strong>——移除管理员只是收回权限，不等于踢人</li>
+<li>该用户之前删除的消息<strong>不会恢复</strong>——管理员删除的消息是永久删除</li>
+<li>如果该用户之前也拥有「添加新管理员」权限且添加了其他管理员，那些由他添加的管理员<strong>不会被自动移除</strong>——你需要手动处理</li>
+</ul>
+<h3 id="安全建议">安全建议</h3>
+<p>如果你要移除一个有「添加新管理员」权限的管理员，移除后立即检查管理员列表，确认该管理员之前添加的人是否仍需保留管理权限。如果不需保留，一并进行移除。</p>
+<p>另外，如果你要移除的管理员可能对你心存不满，建议在移除前先确保群安全（比如暂时关闭入群链接），防止对方在被移除后用其他方式报复。</p>
+<h2 id="best-practices">管理员配置的实战建议</h2>
+<p>以下是基于实际运营经验总结的管理员管理规则：</p>
+<p><strong>关于管理员人数：</strong></p>
+<ul>
+<li>100人以下的群：1-2个管理员就够了</li>
+<li>100-1000人：3-5个管理员，覆盖不同时区</li>
+<li>1000-5000人：5-10个管理员，建议设不同层级</li>
+<li>5000人以上：需要明确的组织架构，按时间段排班</li>
+</ul>
+<p><strong>关于权限腐败：</strong></p>
+<p>说实话，管理员滥用权限的情况非常普遍。最常见的几种：</p>
+<ul>
+<li>删除自己看不惯的成员的正常发言</li>
+<li>用置顶功能给自己打广告</li>
+<li>添加自己的好友为管理员、拉偏架</li>
+<li>在没有群主授权的情况下修改群名或群头像</li>
+</ul>
+<p>防范措施：定期抽查管理操作日志。虽然Telegram没有原生的管理日志功能，但你可以通过观察群内氛围、抽查消息记录、以及成员反馈来判断管理员是否在认真履行职责。</p>
+<p><strong>关于群设置联动：</strong></p>
+<p>管理员的权限和群的基础设置是联动的。建议在配置管理员之前，先检查一下群的基础权限设置。参考我们的<a href="/telegram-group-faq/">群权限设置完整指南</a>了解如何调整群组的基础发言和成员权限。</p>
+<p><strong>关于管理员退出机制：</strong></p>
+<p>任何一个管理员都可能因为个人原因退出团队。建议在任命管理员时就约定好：如果想退出管理团队，请提前告知群主。不要在群里闹情绪退群——这样群成员会质疑管理团队的稳定性。</p>
+<div class="faq-list">
+<div class="faq-item">
+<div class="faq-q">群主可以把自己降为普通管理员吗？
+</div>
+<div class="faq-a">
+不可以。群主只有两个选择：保持群主身份，或者将群主身份转让给另一个人。转让后原群主自动变为普通成员。如果群主想保留管理权限但不承担群主责任，可以把大部分管理员权限分配给一个你信任的管理员，自己只保留群主身份。
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">管理员可以删除其他管理员吗？
+</div>
+<div class="faq-a">
+只有群主可以移除管理员。管理员之间不能互相移除，除非某个管理员被授予了「添加新管理员」权限——但即便如此，拥有此权限的管理员也只能移除由他自己添加的其他管理员，不能移除群主添加的管理员。
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">管理员权限被修改后，对方会收到通知吗？
+</div>
+<div class="faq-a">
+如果新增权限或减少权限，对方会收到一条系统通知，提示其管理员权限已更新。对方不需要确认——权限变更立即生效。
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">管理员最多可以设置多少人？
+</div>
+<div class="faq-a">
+Telegram每个群组最多可以设置50名管理员。对于绝大多数群组来说这个上限绰绰有余。如果你确实需要超过50人的管理团队，可以考虑使用管理机器人（Bot）来分担部分自动化管理任务。
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">群主被封号了，管理员能接管群组吗？
+</div>
+<div class="faq-a">
+如果群主账号被Telegram官方封禁（注意：这里指的是账号被彻底封禁，不是普通的群内禁言），管理员无法自动接管群组。群组在没有群主的情况下仍然可以正常运作——管理员可以继续管理消息和成员，但无法转让群主权限或添加新管理员。这是Telegram群组最脆弱的环节，建议群主绑定两步验证和备用手机号以保护账号安全。
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">管理员被移除后，他之前执行的操作会自动撤销吗？
+</div>
+<div class="faq-a">
+不会。管理员在任期内的所有操作——包括删除的消息、踢出的成员、置顶的内容——在移除后不会自动恢复。如果你发现某个管理员滥用了权限，唯一能做的就是手动恢复：重新邀请被踢的成员、重新发布被删除的重要信息等。这也说明了一个道理：任命管理员要慎重，恢复成本远高于防范成本。
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">可以给机器人设置管理员吗？
+</div>
+<div class="faq-a">
+可以。很多Telegram群组使用管理机器人（如@GroupHelpBot、@Combot等）来自动化执行管理任务。你可以像添加人类管理员一样添加Bot为管理员，并分配你需要的权限项。常用的Bot权限包括：删除消息、封禁用户、置顶消息。注意：Bot不能拥有「添加新管理员」权限。
+</div>
+</div>
+</div>
+<hr>
+<p><em>本文撰写于2026年6月，基于Telegram最新版本操作界面。不同客户端版本的按钮位置和菜单名称可能略有差异，但核心流程一致。如有疑问，请在评论区留言。</em></p>
+<p class="notice">📢 声明：本文为 Telegram建群教程 原创教程，基于Telegram客户端实测编写，仅供参考。Telegram 相关商标归 Telegram Messenger LLP 所有。</p> </div> </article> <!-- Sidebar --> <aside class="art-side" data-astro-cid-yvbahnfj> <div class="sb-card" data-astro-cid-yvbahnfj> <h4 data-astro-cid-yvbahnfj>相关教程</h4> <a href="/telegram-group-owner-transfer/" class="sb-rel-item" data-astro-cid-yvbahnfj> <h5 data-astro-cid-yvbahnfj>Telegram群主转让操作指南：转移群所有权与管理员层级设置</h5> </a> </div> <div class="sb-card" data-astro-cid-yvbahnfj> <h4 data-astro-cid-yvbahnfj>热门标签</h4> <div class="trend-tags" data-astro-cid-yvbahnfj> <a href="/articles/?category=group-create" data-astro-cid-yvbahnfj>群组创建</a><a href="/articles/?category=group-permissions" data-astro-cid-yvbahnfj>群权限设置</a><a href="/articles/?category=group-admin" data-astro-cid-yvbahnfj>管理员配置</a><a href="/articles/?category=group-features" data-astro-cid-yvbahnfj>群组功能管理</a><a href="/articles/?category=group-faq" data-astro-cid-yvbahnfj>建群常见问题</a> </div> </div> </aside> </div>  </main> <!-- Footer --> <footer class="site-footer"> <div class="footer-inner"> <div class="footer-brand"> <div class="footer-logo">TG建群指南</div> <p class="footer-desc">本站为独立教程站点，非 Telegram 官方。所有内容基于公开信息整理。</p> <span class="footer-badge">📚 独立教程网站</span> </div> <div class="footer-col"> <h4>快速导航</h4> <ul> <li><a href="/">首页</a></li> <li><a href="/articles/">所有教程</a></li> <li><a href="/about/">关于我们</a></li> <li><a href="/sitemap/">网站地图</a></li> </ul> </div> <div class="footer-col"> <h4>教程分类</h4> <ul> <li><a href="/articles/?category=group-create">群组创建</a></li><li><a href="/articles/?category=group-permissions">群权限设置</a></li><li><a href="/articles/?category=group-admin">管理员配置</a></li><li><a href="/articles/?category=group-features">群组功能管理</a></li><li><a href="/articles/?category=group-faq">建群常见问题</a></li> </ul> </div> <div class="footer-col"> <h4>支持</h4> <ul> <li><a href="/contact/">联系我们</a></li> <li><a href="/privacy/">隐私政策</a></li> </ul> </div> </div> <div class="footer-bottom"> <p>&copy; 2026 TG建群指南. All rights reserved.</p> </div> </footer> <!-- Inject global CSS (plain <style> avoids Astro's CSS processing) --> <style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}body{font-family:-apple-system,BlinkMacSystemFont,'Noto Sans SC',sans-serif;background:#ffffff;color:#1e293b;line-height:1.6}a{color:#059669;text-decoration:none}a:hover{color:#34D399}.site-nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.06);padding:0 24px}.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px}.nav-logo{font-size:18px;font-weight:700;color:#059669;text-decoration:none}.nav-links{display:flex;gap:24px}.nav-links a{font-size:14px;color:#475569;text-decoration:none;transition:color .2s}.nav-links a:hover,.nav-links a.active{color:#059669}.breadcrumb{max-width:1100px;margin:0 auto;padding:16px 24px 0;font-size:13px;color:#94a3b8}.breadcrumb a{color:#059669;text-decoration:none}.art-wrap{max-width:1100px;margin:0 auto;padding:24px;display:flex;gap:32px}.art-main{flex:1;min-width:0;background:#fff;border-radius:12px;padding:40px;box-shadow:0 1px 3px rgba(0,0,0,.04)}.art-main h1{font-size:28px;font-weight:800;line-height:1.4;margin-bottom:16px;color:#1e293b}.art-meta{display:flex;gap:16px;align-items:center;margin-bottom:24px;font-size:13px;color:#94a3b8}.art-tag{display:inline-block;font-size:11px;font-weight:600;padding:3px 10px;border-radius:6px}.art-tag.group-create{background:#dcfce7;color:#166534}.art-tag.group-permissions{background:#fef3c7;color:#92400e}.art-tag.group-admin{background:#e0e7ff;color:#4338ca}.art-tag.group-features{background:#fce7f3;color:#be185d}.art-tag.group-faq{background:#ecfdf5;color:#065f46}.art-body{font-size:15px;line-height:1.9;color:#475569}.art-body h2{font-size:22px;font-weight:700;margin:36px 0 16px;color:#1e293b}.art-body h3{font-size:18px;font-weight:600;margin:28px 0 12px;color:#1e293b}.art-body p{margin-bottom:16px}.art-body ul,.art-body ol{margin:12px 0 16px 24px}.art-body li{margin-bottom:8px}.art-body code{background:#f5f7fa;padding:2px 6px;border-radius:4px;font-size:13px;color:#e11d48}.art-body pre{background:#1e293b;color:#e2e8f0;padding:20px;border-radius:8px;overflow-x:auto;margin:16px 0;font-size:13px}.art-side{width:300px;flex-shrink:0}.sb-card{background:#fff;border-radius:12px;padding:20px;margin-bottom:20px;box-shadow:0 1px 3px rgba(0,0,0,.04)}.sb-card h4{font-size:14px;font-weight:700;margin-bottom:12px;color:#1e293b}.sb-rel-item{display:flex;gap:10px;margin-bottom:12px;text-decoration:none;color:inherit}.sb-rel-item:hover h5{color:#059669}.sb-rel-item h5{font-size:13px;font-weight:500;line-height:1.4;transition:color .2s}.trend-tags{display:flex;flex-wrap:wrap;gap:8px}.trend-tags a{font-size:12px;padding:4px 12px;background:#f5f7fa;border-radius:16px;color:#475569;text-decoration:none;transition:all .2s}.trend-tags a:hover{background:#e0f2fe;color:#059669}.info-box{background:#f0f9ff;border-left:4px solid #059669;padding:16px 20px;margin:20px 0;border-radius:0 8px 8px 0;font-size:14px}.warn-box{background:#fffbeb;border-left:4px solid #f59e0b;padding:16px 20px;margin:20px 0;border-radius:0 8px 8px 0;font-size:14px}.warn-box strong{color:#92400e}.step-list{counter-reset:step;margin:20px 0}.step-card{background:#fff;border:1px solid #e8ecf1;border-radius:10px;padding:20px;margin-bottom:16px;counter-increment:step;position:relative;padding-left:64px}.step-card::before{content:counter(step);position:absolute;left:16px;top:20px;width:32px;height:32px;background:#059669;color:#fff;border-radius:50%;text-align:center;line-height:32px;font-weight:700;font-size:14px}.faq-list{margin:24px 0}.faq-item{border:1px solid #e8ecf1;border-radius:8px;margin-bottom:8px;overflow:hidden}.faq-q{padding:16px 20px;cursor:pointer;font-weight:600;font-size:15px;background:#f5f7fa;user-select:none;display:flex;justify-content:space-between;align-items:center}.faq-q:hover{background:#f0f7ff}.faq-arrow{font-size:12px;transition:transform .3s;color:#94a3b8}.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}.faq-a-inner{padding:0 20px 16px;font-size:14px;color:#475569;line-height:1.7}.faq-item.open .faq-a{max-height:300px}.faq-item.open .faq-arrow{transform:rotate(180deg)}table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}th{background:#f0f7ff;padding:12px 16px;text-align:left;font-weight:600;border:1px solid #dce8f3}td{padding:12px 16px;border:1px solid #e8ecf1}.site-footer{background:#f0f7ff;border-top:1px solid #dce8f3;margin-top:80px}.footer-inner{max-width:1100px;margin:0 auto;padding:56px 24px 40px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}.footer-logo{font-size:20px;font-weight:700;color:#34D399;margin-bottom:12px}.footer-desc{font-size:13px;line-height:1.8;margin-bottom:16px;color:#475569}.footer-badge{display:inline-block;font-size:12px;background:#fff;color:#059669;padding:6px 14px;border-radius:20px;font-weight:500;border:1px solid #b8ddf5}.footer-col h4{font-size:13px;font-weight:700;color:#1e293b;margin-bottom:16px;letter-spacing:.02em}.footer-col ul{list-style:none}.footer-col li{margin-bottom:10px}.footer-col li a{font-size:13px;color:#475569;text-decoration:none;transition:color .2s}.footer-col li a:hover{color:#059669}.footer-bottom{border-top:1px solid #dce8f3;text-align:center;padding:20px 24px;font-size:12px;color:#94a3b8}@media(max-width:768px){.nav-links{display:none}.art-wrap{flex-direction:column}.art-main{padding:24px}.art-side{width:100%}.footer-inner{grid-template-columns:1fr 1fr;gap:32px}.footer-brand{grid-column:1/-1}}@media(max-width:480px){.footer-inner{grid-template-columns:1fr}}</style> <!-- FAQ accordion JS --> <script>
+    document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){var item=q.parentElement;var open=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight='0'});if(!open){item.classList.add('open');item.querySelector('.faq-a').style.maxHeight='500px'}})})});
+  </script> </body> </html>
